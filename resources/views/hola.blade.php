@@ -1,3 +1,7 @@
 <x-layout title="Hola">
-    {{ $saludo }}
+
+<p>
+    {{ $saludo }}, {{ $persona }}
+</p>
+
 </x-layout>
