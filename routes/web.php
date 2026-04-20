@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::view("/hola", "hola", [
+    "saludo" => "Holiwiiiis"
+]);
+
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get("/hola", function () {
-    return view("hola");
 });
 
 Route::view("/contacto", "contacto");
