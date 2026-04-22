@@ -11,4 +11,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view("/contacto", "contacto");
+//Route::view("/contacto", "contacto");
+
+Route::get("/contacto", function(){
+    return view("contacto", ["alv" => [1, 2, 3]]);
+});
