@@ -8,7 +8,7 @@ Route::view("/hola", "hola", [
 ]);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('ideas');
 });
 
 //Route::view("/contacto", "contacto");
