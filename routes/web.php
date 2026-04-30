@@ -14,5 +14,15 @@ Route::get('/', function () {
 //Route::view("/contacto", "contacto");
 
 Route::get("/contacto", function(){
-    return view("contacto", ["alv" => [1, 2, 3]]);
+    $ideas = session()->get("ideas", []);
+
+    return view("contacto", ["alv" => [1, 2, 3], "ideas" -> $ideas]);
+});
+
+Route::post('/ideas', function () {
+    $idea = request("idea");
+
+    session()->push("ideas", $idea);
+
+    return redirect("/contacto");
 });

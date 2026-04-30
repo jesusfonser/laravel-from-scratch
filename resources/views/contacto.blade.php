@@ -12,4 +12,11 @@
     <x-card class="max-w-400">
         <p>Peazo placeholder. ¿E o no?</p>
     </x-card>
+
+    <div>
+        <ul>
+            @foreach($ideas as $idea)
+                <li>{{ $idea }}</li>
+        </ul>
+    </div>
 </x-layout>
